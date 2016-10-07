@@ -1,6 +1,6 @@
-# Maintainer: Alex Taber <aft dot pokemon at gmail dot com>
+# Maintainer: Jayakrishnan M <javajk2537 at gmail dot com>
 
-pkgname=teamviewer-rpi
+pkgname=teamviewer-host-rpi
 pkgver=11.0.63329
 pkgrel=1
 pkgdesc='TeamViewer Host for Raspberry Pi'
@@ -8,7 +8,7 @@ arch=('armv7h')
 url='http://www.teamviewer.com'
 license=('custom')
 options=('!strip')
-provides=('teamviewer-rpi')
+provides=('teamviewer-host-rpi')
 depends_armv7h=(
 	'fontconfig'
 	'libpng12'
@@ -16,14 +16,20 @@ depends_armv7h=(
 	'libxinerama'
 	'libxrender'
 	'libjpeg6-turbo'
-  'libxtst')
-install=teamviewer-rpi.install
+	'libxtst'
+	'qt5-x11extras'
+	'qt5-webkit' 
+	'qt5-webview' 
+	'qt5-quickcontrols' 
+	'qt5-declarative'
+  )
+install=teamviewer-host-rpi.install
 
 source=("https://download.teamviewer.com/download/linux/version_11x/teamviewer-host_armhf.deb")
 md5sums=('77e9bcf2874090bf2288dacf6b6cb901')
 
 prepare() {
-	tar -xf data.tar.bz2
+	tar -xf data.tar.xz
 }
 
 package() {

@@ -41,8 +41,9 @@ package() {
 	install -D -m0644 "${pkgdir}"/opt/teamviewer/tv_bin/script/teamviewerd.service \
 		"${pkgdir}"/usr/lib/systemd/system/teamviewerd.service
 	install -d -m0755 "${pkgdir}"/usr/{share/applications,share/licenses/teamviewer}
-	ln -s /opt/teamviewer/tv_bin/desktop/teamviewer.desktop \
+	ln -s /opt/teamviewer/tv_bin/desktop/com.teamviewer.teamviewer-host.desktop \
 		"${pkgdir}"/usr/share/applications/teamviewer.desktop
 	ln -s /opt/teamviewer/License.txt \
 		"${pkgdir}"/usr/share/licenses/teamviewer/LICENSE
+
 }

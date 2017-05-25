@@ -1,7 +1,7 @@
 # Maintainer: Jayakrishnan M <javajk2537 at gmail dot com>
 
 pkgname=teamviewer-host-rpi
-pkgver=11.0.63329
+pkgver=12.0.78433
 pkgrel=1
 pkgdesc='TeamViewer Host for Raspberry Pi'
 arch=('armv7h')
@@ -25,8 +25,8 @@ depends_armv7h=(
   )
 install=teamviewer-host-rpi.install
 
-source=("https://download.teamviewer.com/download/linux/version_11x/teamviewer-host_armhf.deb")
-md5sums=('77e9bcf2874090bf2288dacf6b6cb901')
+source=("https://download.teamviewer.com/download/linux/teamviewer-host_armhf.deb")
+md5sums=('4b5f8f8f6b1bef428e30ee0102f908dc')
 
 prepare() {
 	tar -xf data.tar.xz
